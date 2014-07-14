@@ -32,27 +32,20 @@ li{ list-style:none;}
 /* body 中定义在用的最多的文本属性，利用对应的继承机制**/
 body {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;line-height: 18px;font-size: 13px;color: #333;}
 .lay-body{background-color:#C0DEED;}
-.lay-header{
-    width:100%;
-    height:40px;
-    margin:0 0 10px 0 ;
-    background-color:#222;background-image:linear-gradient(180deg,#262626,#1a1a1a);
-    box-shadow:0 0 5px rgba(0,0,0,0.5); 
-    font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;
-}
-
+.lay-header{width:100%;height:40px;
+					background-color:#222;
+					background-image:linear-gradient(180deg,#262626,#1a1a1a);
+					box-shadow:0 0 5px rgba(0,0,0,0.5);font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:0 0 10px;}
 .lay-content{width:950px;margin:0 auto;}
-.lay-container{
-    background:url(../images/clouds.png) no-repeat scroll -660px -350px rgba(0,0,0,0);
-}
-.lay-footer{width:100%; height: 1000px;color: #777777;
-    font-family: "Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;
-    margin: 30px 0 0 0;}
+.lay-container{background:url(../images/clouds.png) no-repeat scroll -660px -350px rgba(0,0,0,0);}
+.lay-footer{width:100%;color:#777;font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:30px 0 0;}
+
+
 /* con-logo**/
-.mod-nav{}
-.con-nav-main:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
-.con-nav-main { *zoom:1; }
+.mod-nav-main:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
+.mod-nav-main { *zoom:1; }
 .mod-nav-item{float: left; display: inline;text-align:center;}
+
 .new-mod-nav-header{width:288px; height:40px; margin:0 10px 0 100px;float: left;; display: inline;}
 .new-mod-nav-header .mod-nav-item{width:72px; height:40px;}
 .new-mod-nav-header .mod-nav-item a{color: #CCCCCC; font-size: 13px; line-height: 40px;}
@@ -99,7 +92,7 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);
     height: 22px;
     padding: 0 6px;
    }
-   
+ 
 .new-mod-box-restaurant .mod-box-head-title  a:hover{background:  #0D9EC; }
 .new-mod-box-restaurant .mod-box-head-text a{ color:#333;}
 .new-mod-box-restaurant .mod-box-head-text mark{color: #fe6000;font: normal 20px/1em Arial,'Helvetica Neue',sans-serif;}
@@ -259,6 +252,7 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);
     width: 59px;}
 	.new-dropdown-scent .dropdown-menu li a{ padding: 3px 0px;  }
 	.new-dropdown-scent .dropdown-menu li a:hover{ background:#7AB0D4;}
+
 /* con-logo**/
 .con-logo{float: left;display:inline;margin:0 10px 0 0;overflow: hidden;}
 .con-logo-text{display: block;
@@ -315,10 +309,9 @@ float:right; display: inline;
 .con-user-action a{color: #CCCCCC;}
 .con-user-action a:hover{color:#999999;}
 
-.con-breadcrumb{color: #0088C8;margin: 5px 0 10px;}
-.con-breadcrumb-current{  font-weight:normal; display:inline;}
+.con-breadcrumb{color: #0088C8;margin: 5px 0 10px; font-size:13px;}
+.con-breadcrumb-current{ font-weight:normal; display:inline;}
 .con-breadcrumb-switch{margin-left: 8px;}
-.con-breadcrumb-switch:hover{ text-decoration:underline;   }
 
 
 .con-shoplist{border-top:1px solid #DDDDDD;zoom:1; }
@@ -380,6 +373,7 @@ float:right; display: inline;
 .con-shop-ann{ color: #ff9933;}
 .con-shop-ann mark{color: #ff9933; margin:3px 0 0 0;}
 .con-information address{ font-style: normal; margin:3px 0 0 0;}
+
 .con-geoplace-warp{margin:30px 0; }
 .con-geoplace{}
 

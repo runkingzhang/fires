@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {color: #555;background: #fff;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-rendering: optimizelegibility;}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {margin: 0;padding: 0;}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, footer, header, hgroup, menu, nav, section {display: block;}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video {display: inline-block;*display: inline;*zoom: 1;}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+body, button, input, select, textarea {font:500 14px/1.8 Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei,sans-serif;}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {text-align: inherit;}
+
+/* 去除默认边框 */
+fieldset, img {border: 0;}
+
+/* 解决 IE6-7 图片缩放锯齿问题 */
+img {-ms-interpolation-mode: bicubic;}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {display: block;}
+
+/* 块/段落引用 */
+blockquote {margin: 1em 0;padding: 0.6em 1em;background: #f9f9f9;border-left: 0.4em solid #ddd;}
+blockquote blockquote {padding: 0 0 0 1em;margin-left: 2em;}
+
+/* Firefox 以外，元素没有下划线，需添加 */
+acronym, abbr {border-bottom: 1px dotted;font-variant: normal;}
+
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+abbr {cursor: help;}
+
+/* 一致的 del 样式 */
+del {text-decoration: line-through;}
+address, caption, cite, code, dfn, em, th, var {font-style: normal;font-weight: 400;}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul, ol {list-style: none;}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {text-align: left;}
+q:before, q:after {content: '';}
+
+/* 统一上标和下标 */
+sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: text-top\9;}
+:root sub, :root sup{vertical-align: baseline; /* for ie9 and other mordern browsers */}
+sup {top: -0.8em;}
+sub {bottom: -0.3em;}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {text-decoration: underline;}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {text-decoration: none;}
+
+/* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
+ * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
+ * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/ 
+ */
+u, .typo-u {text-decoration: underline;}
+
+/* 标记，类似于手写的荧光笔的作用 */
+mark {background: #fffdd1;}
+
+/* 代码片断 */
+code {border:1px dashed #eee;color:#27ae60;padding:0 3px;}
+pre, code {font-family: Inconslata, Consolas, Courier, Courier New, monospace;white-space: pre-wrap;word-wrap: break-word;}
+pre {background:#f9f9f9;padding:10px 15px;line-height:1.36;color:#555;text-shadow:1px 1px 1px #fff;}
+
+/* 底部印刷体、版本等标记 */
+small, .typo-small, .small,
+
+    /* 图片说明 */
+figcaption {font-size:12px;color: #888;}
+
+/* 去除 IE6 input/button 多余的空白 */
+button, input {*width: auto;*overflow: visible;line-height:22px; /* 让 input 和 button 一样高 */ }
+
+a{color:#0088C8;}
+a:hover{ text-decoration:underline;}
+/* 一致化 horizonal rule */
+hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:10px;*color:pink;*filter:chroma(color=pink);height:10px;*margin:-7px 0 2px;}
+
+
+
+.fn-clearfix:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.fn-clearfix {zoom:1; }
+/* lay
+ * author: runkingzhang@163.com
+ */
+
+body {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;line-height: 18px;font-size: 13px;color: #333;}
+.lay-body{background-color:#C0DEED;}
+.lay-header{width:100%;height:40px;
+					background:-webkit-gradient(linear,left top,left bottom,from(#262626),to(#1a1a1a));
+background:-moz-linear-gradient(top,#262626,#1a1a1a);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626', endColorstr='#1a1a1a');
+background:-o-linear-gradient(top,#262626,#1a1a1a);
+background:linear-gradient(top,#262626,#1a1a1a);
+					box-shadow:0 0 5px rgba(0,0,0,0.5);font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:0 0 10px;}
+.lay-content{width:950px;margin:0 auto;}
+.lay-container{background:url(../images/clouds.png) no-repeat scroll -660px -350px rgba(0,0,0,0);}
+.lay-footer{width:100%;color:#777;font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:30px 0 0;}
+
+/* mod-nav
+ * author: runkingzhang@163.com
+ */
+.mod-nav{width:288px; height:40px; margin:0 10px 0 100px;float: left;; display: inline;}
+.mod-nav-main:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
+.mod-nav-main {zoom:1; }
+.mod-nav-item{float: left; display: inline;text-align:center;width:72px; height:40px;}
+.mod-nav-item a{color: #CCCCCC; font-size: 13px; line-height: 40px;}
+.mod-nav-item a:hover{color:#999999; text-decoration:none;}
+ 
+ 
+ /* mod-box 盒子容器
+ * author: runkezhang@163.com
+ */
+.mod-box{border:1px solid #F5F5F5;width:100%;box-shadow:0 1px 2px rgba(0,0,0,0.3);}
+.mod-box-head{position:relative;border-bottom:1px solid #F5F5F5;font-size:14px;height:32px;line-height:32px;zoom:1;padding:0 10px;
+background:-webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#F5F5F5));
+background:-moz-linear-gradient(top,#FFFFFF,#F5F5F5);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F5F5F5');
+background:-o-linear-gradient(top,#FFFFFF,#F5F5F5);
+background:linear-gradient(top,#FFFFFF,#F5F5F5);}
+.mod-box-head:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
+.mod-box-head-title{float:left;display:inline;font-weight:400; font-size:14px;}
+.mod-box-head-text{float:left;display:inline;margin:0 0 0 10px;}
+.mod-box-head-action{float:right;color:#999;}
+.mod-box-head-action:hover{color:#0088C8; text-decoration:none;}
+
+ /* new-mod-box 盒子容器的实例 ，依次是智商而下的实例
+ * author: runkezhang@163.com
+ */
+.new-mod-box-favar{ margin: 10px 0 0 0;}
+.new-mod-box-restaurant{margin:15px 0 0 0; }
+.new-mod-box-restaurant .mod-box-head-title a{background:#0C9EFC;border-radius:2px;color:#FFF;font-size:16px;line-height:22px;height:22px;padding:0 6px;}
+.new-mod-box-restaurant .mod-box-head-title  a:hover{background:  #0D9EC; }
+.new-mod-box-restaurant .mod-box-head-text a{ color:#333;}
+.new-mod-box-restaurant .mod-box-head-text mark{color: #fe6000;font: normal 20px/1em Arial,'Helvetica Neue',sans-serif;}
+.new-mod-box-promoted{margin:15px 0 0 0;}
+.new-mod-box-promoted{ margin:15px 0 0 0;}
+.new-mod-box-promoted  .mod-box-head{height:40px;}
+ 
+ 
+ /* mod-tooltip
+ * author: bootstrap
+ */
+.mod-tooltip{position:absolute;z-index:1030;display:block;visibility:visible;font-size:11px;line-height:1.4;opacity:0;filter:alpha(opacity=0);}
+.mod-tooltip.in{opacity:0.8;filter:alpha(opacity=80);}
+.mod-tooltip-top{margin-top:-3px;padding:5px 0;}
+.mod-tooltip-right{margin-left:3px;padding:0 5px;}
+.mod-tooltip-bottom{margin-top:3px;padding:5px 0;}
+.mod-tooltip-left{margin-left:-3px;padding:0 5px;}
+.mod-tooltip-inner{_white-space:nowrap;max-width:200px;padding:4px 5px 3px 5px;color:#ffffff;text-align:center;text-decoration:none;background-color:#000000;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.mod-tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;_border-color:pink;_filter:chroma(color=pink);border-style:solid;}
+.mod-tooltip-top .mod-tooltip-arrow{bottom:0;_bottom:-16px;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000000;}
+.mod-tooltip-right .mod-tooltip-arrow{top:50%;left:0;_display:none;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000000;}
+.mod-tooltip-left .mod-tooltip-arrow{top:50%;right:0;_display:none;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000000;}
+.mod-tooltip-bottom .mod-tooltip-arrow{top:0;_top:-15px;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000000;}
+/* new-mod-tooltip-time && .new-mod-tooltip-support  
+ * author: runkezhang
+ * father: .mod-tooltip
+ * 利用hover来进行实例，木用bootstrap中的js
+ */
+.new-mod-tooltip-time{ top:-31px; left:-52px; width:150px; display:none;}
+.con-shop-time:hover .new-mod-tooltip-time{ display:block; }
+.new-mod-tooltip-support{ display:block; width:200px; left:-93px; bottom:15px; display:none;}
+.icon-support:hover  .new-mod-tooltip-support{ display:block;    }
+
+/* mod-poptip 带边框的冒泡 用于显示餐馆详情内容
+ * author: runkezhang
+ * 这边是可以完善的
+ */
+.mod-poptip{display:none;float:left;position:absolute;z-index:100;background-color:#000;border-radius:4px;width:334px;background:#ffffe0;opacity:1;border:1px solid #c6c6c6;left:194px;bottom:none;padding:5px 10px 10px 10px;  }
+.mod-poptip-shadow{filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#26e5a96b,endColorstr=#26e5a96b);border-radius:0;zoom:1;_display:inline;padding:2px;}
+.mod-poptip-content{color:#FFF;line-height:16px;font-size:12px;text-align:center;background:#ffffe0;padding:3px 5px;}
+.poptip-arrow{position:absolute;overflow:visible;font-style:normal;font-family:simsun;font-size:12px;}
+.poptip-arrow em,.poptip-arrow i{position: absolute;left:65px;font-style: normal;}
+.poptip-arrow em{color: #c6c6c6;opacity: 1;}
+.poptip-arrow i{color: #ffffe0;text-shadow:none;opacity: 1;}
+.poptip-arrow-top,.poptip-arrow-bottom{height: 6px;width: 12px;left:12px;margin-left:-6px;}
+.poptip-arrow-left,.poptip-arrow-right{height: 12px;width: 6px;margin-top:-6px;}
+.poptip-arrow-top{top: -6px;}
+.poptip-arrow-top em{top: -1px;}
+.poptip-arrow-top i{top: 0px;}
+.poptip-arrow-bottom{bottom: -6px;}
+.poptip-arrow-bottom em{top: -8px;}
+.poptip-arrow-bottom i{top: -9px;}
+.poptip-arrow-left{left:-6px;}
+.poptip-arrow-left em{left:1px;}
+.poptip-arrow-left i{left:2px;}
+.poptip-arrow-right{right:-6px;}
+.poptip-arrow-right em{left:-6px;}
+.poptip-arrow-right i{left:-7px;}
+
+.con-shoplist-item:hover .new-poptip-information{ display:block;}
+/* mod-poptip 在原型的基础上实例出四种不同的样式
+ * author: runkezhang
+ * father：mod-poptip
+ */
+.new-poptip-information{top:-10px;}
+.new-poptip-information .poptip-arrow em,.new-poptip-information .poptip-arrow i{top:20px;}
+.new-poptip-information .poptip-arrow-left{top:10px; }
+
+.con-shoplist-item:hover .new-poptip-information-top{ display:block;}
+.new-poptip-information-top{bottom:10px;}
+.new-poptip-information-top .poptip-arrow em,.new-poptip-information-top .poptip-arrow i{ bottom:30px;}
+.new-poptip-information-top .poptip-arrow-left{bottom:30px; }
+
+.con-shoplist-item:hover .new-poptip-information-left-top{display:block;}
+.new-poptip-information-left-top{left:-360px;bottom:10px; display:none;}
+.new-poptip-information-left-top  .poptip-arrow-right{bottom:30px; }
+.new-poptip-information-left-top .poptip-arrow em,.new-poptip-information-left-top .poptip-arrow i{bottom:30px;}
+
+
+.con-shoplist-item:hover .new-poptip-information-left{ display:block;}
+
+.new-poptip-information-left{top:-10px; left:-360px;}
+.new-poptip-information-left  .poptip-arrow-right{top:10px; }
+.new-poptip-information-left .poptip-arrow em,.new-poptip-information-left .poptip-arrow i{top:20px;}
+
+ 
+/* con-logo && con-apps
+ * author: runkingzhang@163.com
+ */
+.con-logo{float:left;display:inline;overflow:hidden;margin:0 10px 0 0;}
+.con-logo-text{display:block;width:90px;height:40px;background:url(../images/topbar.png) no-repeat transparent 0 0;line-height:0;font-size:0;overflow:hidden;}
+.con-logo-text:hover{background:url(../images/topbar.png) no-repeat transparent 1px 1px;}
+.con-apps{display:block;float:left;position:relative;width:82px;border-radius:3px;background:#2D2D2D;font-size:12px;height:24px;line-height:24px;color:#ABABAB;text-indent:18px;margin:8px 15px 0 10px;}
+.icon-mobile{display:block;width:14px;height:14px;position:absolute;left:4px;top:5px;background:url(../images/topbar.png) no-repeat scroll 0 -40px;}
+.con-apps:hover{background:#3D3D3D;}
+/* con-search
+ * author: runkingzhang@163.com
+ 这边还是可以完善的
+ */
+.con-search-warp{float:left;display:inline;}
+.con-search-form{width:200px;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #141414;border-radius:3px;box-shadow:inset 0 2px 4px rgba(0,0,0,0.3),0 1px 0 #2a2a2a;background:#4E4E4E;margin:7px 0 0;padding:3px 6px;}
+.con-search-text{float:right;height:18px;width:186px;display:inline;background:rgba(0,0,0,0);text-indent:20px; border:none;  }
+.con-search-text:focus{background:#FFF;text-indent:20px;}
+.con-search-submit{float:left;display:inline;line-height:32px;width:14px;height:14px;border:none;background:rgba(0,0,0,0);padding:0;}
+.icon-search{display:block;width:14px;height:14px;background:url(../images/topbar.png) no-repeat scroll 0 -60px;}
+/* con-user-menu 用户操作
+ * author: runkingzhang@163.com
+ */
+.con-user-menu{height:15px; float:left; display:inline; border-left:1px solid  #333; margin:12px 0 0 0;}
+.con-user-cart{float:left; display:inline;padding:0 10px 0 20px;}
+.incon-cart{display:block;height:20px;width:20px;background:url(../images/topbar.png?v=2) no-repeat scroll 0 -80px;}
+.con-user-action{float:right;display:inline;font-size:13px;line-height:15px;color:#CCC;margin:0 0 0 10px;padding:0 10px;}
+.con-user-action a{color:#CCC;}
+.con-user-action a:hover{color:#999;text-decoration:none;}
+
+/* con-breadcrumb 面包屑
+ * author: runkingzhang@163.com
+ */
+.con-breadcrumb{color:#0088C8;margin:5px 0 10px;}
+.con-breadcrumb-current{font-weight:400;display:inline;font-size:13px; margin:0 8px 0 0;}
+
+/* con-shoplist 餐馆列表
+ * author: runkingzhang@163.com
+ */
+.con-shoplist{border-top:1px solid #DDD;zoom:1;background:#FFF;}
+.con-shoplist:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
+.con-shoplist-item{float:left;display:inline;background:#FFF;width:189px;height:90px;border-left:1px solid #DDD;position:relative;}
+.con-shoplist-item:first-child{border-left:1px solid #FFF;}
+/* new-con-shoplist-favar
+ * author: runkingzhang@163.com
+ * father:con-shoplist
+ */
+.new-con-shoplist-favar .con-shoplist-item{background:url(../images/bg.gif) no-repeat scroll -112px -94px #FFF;}
+.new-con-shoplist-favar .con-shoplist-item:hover{background:url(../images/bg.gif) no-repeat scroll -303px -94px #FFF;}
+
+
+/* con-shop-box 餐馆列表区块
+ * author: runkezhang
+ * 这边的关系是可以完善的
+ */
+.con-shop-box{padding: 8px 0;overflow: visible;zoom:1;}
+.con-shop-box:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.con-shop-cap{float: left; display: inline;padding: 0  0 0 10px;}
+.con-shop-cap a{display: block; position: relative;height: 42px; width:42px; border: 1px solid #DDDDDD;padding: 1px;overflow: visible }
+.con-shop-cap a:hover{border: 1px solid  #999;}
+.con-shop-cap a .icon-phone{ position: absolute; right: -9px; bottom: -9px; z-index: 10;height: 24px;width: 24px;background: url("../images/phone-logo.png") no-repeat scroll -4px -1px rgba(0, 0, 0, 0);}
+.con-shop-cap a img{width: 41px; height: 41px;}
+.con-shop-time{width:46px;position:relative;display:block;color:#666;font-size:12px;height:16px;line-height:14px;margin-top:8px;padding-top:2px;text-align:center;}
+.con-shop-time-busy{background: #FFE2E2;}
+
+.con-shop-body{float:left;display:inline;overflow:hiidden;width:118px;margin:0 7px 0 8px;}
+.con-shop-name{white-space:nowrap; overflow:hidden;width:119px; }
+.con-shop-name a{color: #333333;font-size: 15px;overflow: hidden; font-weight: normal;}
+
+.con-shop-status{ display:block;height: 20px; margin-top: 9px; background:none repeat scroll 0 0 #F8F8EE;border:1px solid #59B170;color:#59B170;font-size:12px;padding:2px 4px;}
+
+.con-shop-status span{background:none repeat scroll 0 0 #F8F8EE;border:1px solid #59B170;color:#59B170;font-size:12px;padding:2px 4px;}
+.con-shop-status-desc{margin-top:11px;font-size:12px;line-height:14px;color:#999;}
+.con-shop-favor{position:relative;font-size:12px;height:14px;line-height:14px;margin-top:7px;display:none;}
+.con-shop-favor a{position:absolute;right:0;top:0;line-height:14px;color:#999; }
+.con-shop-favor .icon-favor{display:block;background:url(../images/bg.gif) no-repeat scroll -475px -776px rgba(0,0,0,0);height:22px;width:22px;position:absolute;right:30px;top:0;}
+.con-shop-flavors{color:#666;font-size:12px;height:12px;line-height:12px;margin-top:4px;}
+.con-shop-ratings{color:#666;font-size:12px;margin-top:4px;height:14px;}
+.con-shop-rating-star{background:url(../images/bg.gif) no-repeat scroll -1px -193px rgba(0,0,0,0);display:inline-block;float:left;height:14px;width:61px;}
+.con-shop-rating-number{color:#999;float:left;display:inline;font-size:12px;line-height:14px;margin-left:3px;}
+.con-shop-support{margin-top:3px; position:relative; float:left; }
+.con-shop-support b{display:block; width:15px; height:15px; float:left; position:relative; overflow:visible; margin:3px 5px 0 0 ; background:url(../images/service-icons.png8.png?v=3) no-repeat scroll 0 0 rgba(0,0,0,0); font-weight:normal;  }
+.con-shop-support .icon-support{ background-position: 0 0;}
+.con-shop-support .icon-invoice{ background-position: 0 -120px;}
+.con-shop-support .icon-deliver{background-position: 0 -140px;}
+
+.con-shoplist-item:hover .con-shop-status-desc{display: none;}
+.con-shoplist-item:hover .con-shop-favor { display: block;}
+
+/* con-shop-information 餐馆信息
+ * author: runkezhang
+ */
+.con-information{text-align: left; line-height: 20px; color: #333333;}
+.con-information p{margin: 3px 0 0 0;}
+.con-information .con-shop-name{font-size: 15px; line-height: 20px; font-weight: normal;}
+.con-information .con-shop-name a:hover{ color:#0088C8 }
+.con-information mark{ font-weight: bold; font-style:  normal;  color: #333333; padding: 0 4px 0 0;}
+.con-shop-ann{ color: #ff9933;}
+.con-shop-ann mark{color: #ff9933; margin:3px 0 0 0;}
+.con-information address{ font-style: normal; margin:3px 0 0 0;}
+
+
+
+
