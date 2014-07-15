@@ -69,6 +69,7 @@ background:-moz-linear-gradient(top,#FFFFFF,#F5F5F5);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#F5F5F5');
 background:-o-linear-gradient(top,#FFFFFF,#F5F5F5);
 background:linear-gradient(top,#FFFFFF,#F5F5F5);
+
 	zoom:1;
 }
 .mod-box-head:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
@@ -188,6 +189,7 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);
 .new-poptip-information-left{top:-10px; left:-360px;}
 .new-poptip-information-left  .poptip-arrow-right{top:10px; }
 .new-poptip-information-left .poptip-arrow em,.new-poptip-information-left .poptip-arrow i{top:20px;}
+
 /* dropdown
  * author: bootstrap
  */
@@ -330,7 +332,7 @@ float:right; display: inline;
 .new-con-shoplist-favar .con-shoplist-item:hover{background: url("../images/bg.gif") no-repeat scroll -303px -94px #FFFFFF;}
 
 /* con-shop
- * author: runkezhang
+ * author: runkezhang@163.com
  */
 .con-shop-box{padding: 8px 0;overflow: visible;background: #FFFFFF;zoom:1;}
 .con-shop-box:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
@@ -361,7 +363,19 @@ float:right; display: inline;
 .con-shop-support .icon-deliver{background-position: 0 -140px;}
 .con-shoplist-item:hover .con-shop-status-desc{display: none;}
 .con-shoplist-item:hover .con-shop-favor { display: block;}
-
+/* .new-con-shop-box-tuan
+ * author: runkezhang@163.com
+ * 原型： .con-shop-box
+ */
+.new-con-shop-box-tuan .con-shop-cap a{overflow:hidden;width:67px;z-index:20;padding:2px;}
+.new-con-shop-box-tuan .con-shop-cap a img{height:42px;width:67px;}
+.con-shop-count{font-size:12px;color:#666;text-align:center;height:16px;overflow:hidden;display:block;margin:3px 0 0;}
+.new-con-shop-box-tuan .con-shop-body{width:85px;}
+.con-shop-price{line-height:20px;color:#666;}
+.con-shop-price span{color:#999;text-decoration:line-through;}
+.con-shop-button{cursor:pointer;border-radius:2px;width:70px;background-color:#FFF;border:1px solid #D9D9D9;color:#FF8400;text-align:center;margin:5px 0 0;}
+.con-shop-button a{color:#FF8400;line-height:22px;font-family:"Microsoft YaHei",黑体;font-size:12px;}
+.con-shop-button a:hover{color:#F60;text-decoration:none;}
 
 
 
@@ -382,22 +396,12 @@ float:right; display: inline;
 .con-geoplace-item:hover{margin-top:-1px;}
 .con-geoplace-item img{width: 150px; height: 93px;}
 
-
-
-.con-filter{ line-height:40px; }
-.con-filter-wrap{ float:left; display:inline; background: url("../images/divider.gif") no-repeat scroll right  center rgba(0, 0, 0, 0);; margin:0 10px 0 0;}
-.con-filter input{margin:1px 2px 0 0 ;}
-.con-filter label{vertical-align: middle; padding:0 10px 0 0 ; position:relative;}
-.icon-new{
-	background: url("../images/pRst-sprites.png?v=3") no-repeat scroll 0 -330px rgba(0, 0, 0, 0);
-	height: 17px;
-    left: 20px;
-    position: absolute;
-    top: -17px;
-    width: 31px;
-	}
-.new-con-filter-wrap-nomargin{ margin:0;}
-
+.con-filter{line-height:40px;}
+.con-filter-wrap{float:left;display:inline;background:url(../images/divider.gif) no-repeat scroll right center rgba(0,0,0,0);margin:0 10px 0 0;}
+.con-filter input{margin:1px 2px 0 0;}
+.con-filter label{vertical-align:middle;position:relative;padding:0 10px 0 0;}
+.icon-new{background:url(../images/pRst-sprites.png?v=3) no-repeat scroll 0 -330px rgba(0,0,0,0);height:17px;left:20px;position:absolute;top:-17px;width:31px;}
+.new-con-filter-wrap-nomargin{margin:0;}
 
 .new-con-shop-box-tuan .con-shop-cap{ width:}
 .new-con-shop-box-tuan .con-shop-cap a{
@@ -445,6 +449,7 @@ margin:3px 0 0 0;
 .mod-nav-footer .mod-nav-footer-item{padding: 0 10px; border-left:1px solid #999;  line-height:1em; display:inline;}
 .mod-nav-footer .mod-nav-footer-item:first-child{ border:none;}
 .mod-nav-footer .mod-nav-footer-item a:hover{ text-decoration:underline;}
+
 .lay-footer .lay-content  p {
 text-align: center;
 margin: 0 0 15px;

@@ -87,7 +87,6 @@ figcaption {font-size:12px;color: #888;}
 
 /* 去除 IE6 input/button 多余的空白 */
 button, input {*width: auto;*overflow: visible;line-height:22px; /* 让 input 和 button 一样高 */ }
-
 a{color:#0088C8;}
 a:hover{ text-decoration:underline;}
 /* 一致化 horizonal rule */
@@ -100,7 +99,6 @@ hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:10px;*color:pink;*f
 /* lay
  * author: runkingzhang@163.com
  */
-
 body {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;line-height: 18px;font-size: 13px;color: #333;}
 .lay-body{background-color:#C0DEED;}
 .lay-header{width:100%;height:40px;
@@ -109,24 +107,25 @@ background:-moz-linear-gradient(top,#262626,#1a1a1a);
 filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626', endColorstr='#1a1a1a');
 background:-o-linear-gradient(top,#262626,#1a1a1a);
 background:linear-gradient(top,#262626,#1a1a1a);
+
 					box-shadow:0 0 5px rgba(0,0,0,0.5);font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:0 0 10px;}
 .lay-content{width:950px;margin:0 auto;}
 .lay-container{background:url(../images/clouds.png) no-repeat scroll -660px -350px rgba(0,0,0,0);}
-.lay-footer{width:100%;color:#777;font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:30px 0 0;}
+.lay-footer{width:100%;color:#777;font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;padding:30px 0 ;}
 
-/* mod-nav
+/* mod-nav 页面头部导航
  * author: runkingzhang@163.com
  */
-.mod-nav{width:288px; height:40px; margin:0 10px 0 100px;float: left;; display: inline;}
+.mod-nav{width:288px; height:40px; margin:0 10px 0 100px;float: left;;display: inline;}
 .mod-nav-main:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
 .mod-nav-main {zoom:1; }
 .mod-nav-item{float: left; display: inline;text-align:center;width:72px; height:40px;}
 .mod-nav-item a{color: #CCCCCC; font-size: 13px; line-height: 40px;}
 .mod-nav-item a:hover{color:#999999; text-decoration:none;}
  
- 
  /* mod-box 盒子容器
- * author: runkezhang@163.com
+ *  author: runkezhang@163.com
+ *  child: con-shoplist
  */
 .mod-box{border:1px solid #F5F5F5;width:100%;box-shadow:0 1px 2px rgba(0,0,0,0.3);}
 .mod-box-head{position:relative;border-bottom:1px solid #F5F5F5;font-size:14px;height:32px;line-height:32px;zoom:1;padding:0 10px;
@@ -145,94 +144,154 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);}
  * author: runkezhang@163.com
  */
 .new-mod-box-favar{ margin: 10px 0 0 0;}
-.new-mod-box-restaurant{margin:15px 0 0 0; }
+.new-mod-box-restaurant,.new-mod-box-promoted,new-mod-box-more{margin:15px 0 0 0; }
 .new-mod-box-restaurant .mod-box-head-title a{background:#0C9EFC;border-radius:2px;color:#FFF;font-size:16px;line-height:22px;height:22px;padding:0 6px;}
-.new-mod-box-restaurant .mod-box-head-title  a:hover{background:  #0D9EC; }
-.new-mod-box-restaurant .mod-box-head-text a{ color:#333;}
-.new-mod-box-restaurant .mod-box-head-text mark{color: #fe6000;font: normal 20px/1em Arial,'Helvetica Neue',sans-serif;}
-.new-mod-box-promoted{margin:15px 0 0 0;}
-.new-mod-box-promoted{ margin:15px 0 0 0;}
+.new-mod-box-restaurant .mod-box-head-title a:hover{background:#2872a2; text-decoration:none;}
+.new-mod-box-restaurant .mod-box-head-text a{color:#333;}
+.new-mod-box-restaurant .mod-box-head-text mark{color: #fe6000;font: normal 20px/1em Arial,'Helvetica Neue',sans-serif; background:#FFFFFF;}
 .new-mod-box-promoted  .mod-box-head{height:40px;}
  
  
  /* mod-tooltip
  * author: bootstrap
  */
+ 
 .mod-tooltip{position:absolute;z-index:1030;display:block;visibility:visible;font-size:11px;line-height:1.4;opacity:0;filter:alpha(opacity=0);}
 .mod-tooltip.in{opacity:0.8;filter:alpha(opacity=80);}
 .mod-tooltip-top{margin-top:-3px;padding:5px 0;}
 .mod-tooltip-right{margin-left:3px;padding:0 5px;}
 .mod-tooltip-bottom{margin-top:3px;padding:5px 0;}
 .mod-tooltip-left{margin-left:-3px;padding:0 5px;}
-.mod-tooltip-inner{_white-space:nowrap;max-width:200px;padding:4px 5px 3px 5px;color:#ffffff;text-align:center;text-decoration:none;background-color:#000000;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.mod-tooltip-inner{_white-space:nowrap;max-width:300px;padding:4px 5px 3px 5px;color:#ffffff;text-align:center;text-decoration:none;background-color:#000000;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
 .mod-tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;_border-color:pink;_filter:chroma(color=pink);border-style:solid;}
 .mod-tooltip-top .mod-tooltip-arrow{bottom:0;_bottom:-16px;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000000;}
 .mod-tooltip-right .mod-tooltip-arrow{top:50%;left:0;_display:none;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000000;}
 .mod-tooltip-left .mod-tooltip-arrow{top:50%;right:0;_display:none;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000000;}
 .mod-tooltip-bottom .mod-tooltip-arrow{top:0;_top:-15px;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000000;}
+
 /* new-mod-tooltip-time && .new-mod-tooltip-support  
  * author: runkezhang
  * father: .mod-tooltip
  * 利用hover来进行实例，木用bootstrap中的js
  */
-.new-mod-tooltip-time{ top:-31px; left:-52px; width:150px; display:none;}
+ 
+.new-mod-tooltip-time{top:-31px; left:-52px; width:150px; display:none;}
 .con-shop-time:hover .new-mod-tooltip-time{ display:block; }
 .new-mod-tooltip-support{ display:block; width:200px; left:-93px; bottom:15px; display:none;}
-.icon-support:hover  .new-mod-tooltip-support{ display:block;    }
+.icon-support:hover  .new-mod-tooltip-support{ display:block;}
+.new-mod-tooltip-cart{top:18px; right:-10px; width:280px; height:42px; opacity:1;filter:alpha(opacity=100); display:none;}
+.new-mod-tooltip-cart .mod-tooltip-inner{padding:12px 20px; background:#FFF;  color:#222222; font-size:13px; font-weight:normal;}
+.new-mod-tooltip-cart  .mod-tooltip-arrow{top:0;_top:-15px; left:89%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#ffffff;}
+.incon-cart:hover .new-mod-tooltip-cart{ display:block;}
 
 /* mod-poptip 带边框的冒泡 用于显示餐馆详情内容
  * author: runkezhang
- * 这边是可以完善的
+ * 这边是可以完善的 这边应该按照自己的规范来写。
  */
-.mod-poptip{display:none;float:left;position:absolute;z-index:100;background-color:#000;border-radius:4px;width:334px;background:#ffffe0;opacity:1;border:1px solid #c6c6c6;left:194px;bottom:none;padding:5px 10px 10px 10px;  }
+ 
+.mod-poptip{display:none;float:left;position:absolute;z-index:100;background-color:#000;width:334px;background:#ffffe0;opacity:1;border:1px solid #c6c6c6;left:194px;bottom:none;padding:5px 10px 10px 10px;  }
 .mod-poptip-shadow{filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#26e5a96b,endColorstr=#26e5a96b);border-radius:0;zoom:1;_display:inline;padding:2px;}
 .mod-poptip-content{color:#FFF;line-height:16px;font-size:12px;text-align:center;background:#ffffe0;padding:3px 5px;}
-.poptip-arrow{position:absolute;overflow:visible;font-style:normal;font-family:simsun;font-size:12px;}
-.poptip-arrow em,.poptip-arrow i{position: absolute;left:65px;font-style: normal;}
-.poptip-arrow em{color: #c6c6c6;opacity: 1;}
-.poptip-arrow i{color: #ffffe0;text-shadow:none;opacity: 1;}
-.poptip-arrow-top,.poptip-arrow-bottom{height: 6px;width: 12px;left:12px;margin-left:-6px;}
-.poptip-arrow-left,.poptip-arrow-right{height: 12px;width: 6px;margin-top:-6px;}
-.poptip-arrow-top{top: -6px;}
-.poptip-arrow-top em{top: -1px;}
-.poptip-arrow-top i{top: 0px;}
-.poptip-arrow-bottom{bottom: -6px;}
-.poptip-arrow-bottom em{top: -8px;}
-.poptip-arrow-bottom i{top: -9px;}
-.poptip-arrow-left{left:-6px;}
-.poptip-arrow-left em{left:1px;}
-.poptip-arrow-left i{left:2px;}
-.poptip-arrow-right{right:-6px;}
-.poptip-arrow-right em{left:-6px;}
-.poptip-arrow-right i{left:-7px;}
+.mod-poptip-arrow  {position:absolute;overflow:visible;font-style:normal;font-family:simsun;font-size:12px;}
+.mod-poptip-arrow   em,.mod-poptip-arrow   i{position: absolute;left:65px;font-style: normal;}
+.mod-poptip-arrow   em{color: #c6c6c6;opacity: 1;}
+.mod-poptip-arrow   i{color: #ffffe0;text-shadow:none;opacity: 1;}
+.mod-poptip-arrow-top,.mod-poptip-arrow-bottom{height: 6px;width: 12px;left:12px;margin-left:-6px;}
+.mod-poptip-arrow-left,.mod-poptip-arrow-right{height: 12px;width: 6px;margin-top:-6px;}
+.mod-poptip-arrow-top{top: -6px;}
+.mod-poptip-arrow-top em{top: -1px;}
+.mod-poptip-arrow-top i{top: 0px;}
+.mod-poptip-arrow-bottom{bottom: -6px;}
+.mod-poptip-arrow-bottom em{top: -8px;}
+.mod-poptip-arrow-bottom i{top: -9px;}
+.mod-poptip-arrow-left{left:-6px;}
+.mod-poptip-arrow-left em{left:1px;}
+.mod-poptip-arrow-left i{left:2px;}
+.mod-poptip-arrow-right{right:-6px;}
+.mod-poptip-arrow-right em{left:-6px;}
+.mod-poptip-arrow-right i{left:-7px;}
 
 .con-shoplist-item:hover .new-poptip-information{ display:block;}
 /* mod-poptip 在原型的基础上实例出四种不同的样式
  * author: runkezhang
  * father：mod-poptip
+ * child: con-information
  */
 .new-poptip-information{top:-10px;}
-.new-poptip-information .poptip-arrow em,.new-poptip-information .poptip-arrow i{top:20px;}
-.new-poptip-information .poptip-arrow-left{top:10px; }
-
+.new-poptip-information .mod-poptip-arrow   em,.new-poptip-information .mod-poptip-arrow   i{top:20px;}
+.new-poptip-information .mod-poptip-arrow-left{top:10px; }
 .con-shoplist-item:hover .new-poptip-information-top{ display:block;}
 .new-poptip-information-top{bottom:10px;}
-.new-poptip-information-top .poptip-arrow em,.new-poptip-information-top .poptip-arrow i{ bottom:30px;}
-.new-poptip-information-top .poptip-arrow-left{bottom:30px; }
-
+.new-poptip-information-top .mod-poptip-arrow   em,.new-poptip-information-top .mod-poptip-arrow   i{ bottom:30px;}
+.new-poptip-information-top .mod-poptip-arrow-left{bottom:30px; }
 .con-shoplist-item:hover .new-poptip-information-left-top{display:block;}
 .new-poptip-information-left-top{left:-360px;bottom:10px; display:none;}
-.new-poptip-information-left-top  .poptip-arrow-right{bottom:30px; }
-.new-poptip-information-left-top .poptip-arrow em,.new-poptip-information-left-top .poptip-arrow i{bottom:30px;}
+.new-poptip-information-left-top  .mod-poptip-arrow-right{bottom:30px; }
+.new-poptip-information-left-top .mod-poptip-arrow em,.new-poptip-information-left-top .mod-poptip-arrow   i{bottom:30px;}
 
 
 .con-shoplist-item:hover .new-poptip-information-left{ display:block;}
 
 .new-poptip-information-left{top:-10px; left:-360px;}
-.new-poptip-information-left  .poptip-arrow-right{top:10px; }
-.new-poptip-information-left .poptip-arrow em,.new-poptip-information-left .poptip-arrow i{top:20px;}
+.new-poptip-information-left  .mod-poptip-arrow-right{top:10px; }
+.new-poptip-information-left .mod-poptip-arrow   em,.new-poptip-information-left .mod-poptip-arrow   i{top:20px;}
 
+
+/* dropdown
+ * author: bootstrap
+ */
+.dropup,.dropdown{position:relative;}
+.dropdown-toggle{*margin-bottom:-3px;}
+.dropdown-toggle:active,.open .dropdown-toggle{outline:0;}
+.caret{display:inline-block;width:0;height:0;vertical-align:top;border-top:4px solid #000000;border-right:4px solid transparent;border-left:4px solid transparent;content:"";}
+.dropdown .caret{margin-top:18px;margin-left:2px;}
+.dropdown-menu{display:none;position:absolute;top:100%;_top:1em;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;background-color:#ffffff;border:1px solid #f2f1ec;border-right-width:2px;border-bottom-width:2px;-webkit-background-clip:padding-box;-moz-background-clip:padding;background-clip:padding-box;}
+.dropdown-menu.pull-right{right:0;left:auto;}
+.dropdown-menu .divider{*width:100%;height:1px;margin:9px 1px;*margin:-5px 0 5px;overflow:hidden;background-color:#e5e5e5;border-bottom:1px solid #ffffff;}
+.dropdown-menu li a{display:block;padding:3px 20px;clear:both;font-weight:normal;line-height:20px;color:#333333;white-space:nowrap;}
+.dropdown-menu li a:hover,.dropdown-menu li a:focus,.dropdown-submenu:hover a,.dropdown-submenu:focus a{text-decoration:none;color:#ffffff;background-color:#0081c2;background-image:-moz-linear-gradient(top, #0088cc, #0077b3);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));background-image:-webkit-linear-gradient(top, #0088cc, #0077b3);background-image:-o-linear-gradient(top, #0088cc, #0077b3);background-image:linear-gradient(to bottom, #0088cc, #0077b3);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);}
+.dropdown-menu .active a,.dropdown-menu .active a:hover,.dropdown-menu .active a:focus{color:#ffffff;text-decoration:none;outline:0;background-color:#0081c2;background-image:-moz-linear-gradient(top, #0088cc, #0077b3);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));background-image:-webkit-linear-gradient(top, #0088cc, #0077b3);background-image:-o-linear-gradient(top, #0088cc, #0077b3);background-image:linear-gradient(to bottom, #0088cc, #0077b3);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);}
+.dropdown-menu .disabled a,.dropdown-menu .disabled a:hover,.dropdown-menu .disabled a:focus{color:#999999;}
+.dropdown-menu .disabled a:hover,.dropdown-menu .disabled a:focus{text-decoration:none;background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);cursor:default;}
+.open{*z-index:1000;}
+.open .dropdown-menu{display:block;}
+.dropdown-backdrop{position:fixed;left:0;right:0;bottom:0;top:0;z-index:990;}
+.pull-right .dropdown-menu{right:0;left:auto;}
+.dropup .caret,.navbar-fixed-bottom .dropdown .caret{border-top:0;border-bottom:4px solid #000000;content:"";}
+.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:1px;}
+.dropdown-submenu{position:relative;}
+.dropdown-submenu .dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;}
+.dropdown-submenu:hover .dropdown-menu{display:block;}
+.dropup .dropdown-submenu .dropdown-menu{top:auto;bottom:0;margin-top:0;margin-bottom:-2px}
+.dropdown-submenu a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left .dropdown-menu{left:-100%;margin-left:10px;}
+.dropdown .dropdown-menu .nav-header{padding-left:20px;padding-right:20px;}
+
+/* new-dropdown-scent 口味下拉菜单
+ * author: runkezhang@163.com
+ * father:dropdown 这边太复杂了，可以优化。
+ */
  
+.new-dropdown-scent{ float:left; display:inline; }
+.new-dropdown-scent:hover  .dropdown-menu{ display:block;}
+.new-dropdown-scent .dropdown-def{padding:0 0 0 18px; width:43px; float:left; display:inline-block; color:#333333;   }
+.new-dropdown-scent .dropdown-def:hover{ background:#F0F0F0; width:41px; border:1px solid #D0D0D0; text-decoration:none; margin: -2px  0 0 0; }
+.new-dropdown-scent .dropdown-def:hover
+.new-dropdown-scent  .caret{ margin-top:18px; }
+.new-dropdown-scent .dropdown-menu{background:none repeat scroll 0 0 #F0F0F0;border:1px solid #D0D0D0;list-style-type:none;margin-left:0;margin-top:-1px;position:absolute;min-width:0;width:59px;z-index:9;padding:0;}
+.new-dropdown-scent .dropdown-menu li{height:30px;text-align:center;width:59px;}
+.new-dropdown-scent .dropdown-menu li a{padding:3px 0;}
+.new-dropdown-scent .dropdown-menu li a:hover{background:#7AB0D4;}
+ 
+ /*.mod-nav-footer
+ * author: runkingzhang@163.com
+ */
+.mod-nav-footer{text-align:center; margin:0 auto;margin:0 0 10px 0;}
+.mod-nav-footer .mod-nav-footer-item{padding: 0 10px; border-left:1px solid #999;  line-height:1em; display:inline;}
+.mod-nav-footer .mod-nav-footer-item:first-child{ border:none;}
+.mod-nav-footer .mod-nav-footer-item a:hover{ text-decoration:underline;}
+
 /* con-logo && con-apps
  * author: runkingzhang@163.com
  */
@@ -242,21 +301,24 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);}
 .con-apps{display:block;float:left;position:relative;width:82px;border-radius:3px;background:#2D2D2D;font-size:12px;height:24px;line-height:24px;color:#ABABAB;text-indent:18px;margin:8px 15px 0 10px;}
 .icon-mobile{display:block;width:14px;height:14px;position:absolute;left:4px;top:5px;background:url(../images/topbar.png) no-repeat scroll 0 -40px;}
 .con-apps:hover{background:#3D3D3D;}
+
 /* con-search
  * author: runkingzhang@163.com
- 这边还是可以完善的
+ 这边还是可以完善的 这边还可以加上动画相关的内容m, 实现一个效果获取的时候的内容。这边和原来的效果还是有点不一样的，需要注意了的。
  */
-.con-search-warp{float:left;display:inline;}
-.con-search-form{width:200px;height:26px;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #141414;border-radius:3px;box-shadow:inset 0 2px 4px rgba(0,0,0,0.3),0 1px 0 #2a2a2a;background:#4E4E4E;margin:7px 0 0;padding:3px 6px;}
-.con-search-text{float:right;height:18px;width:186px;display:inline;background:rgba(0,0,0,0);text-indent:20px; border:none;  }
-.con-search-text:focus{background:#FFF;text-indent:20px;}
-.con-search-submit{float:left;display:inline;line-height:32px;width:14px;height:14px;border:none;background:rgba(0,0,0,0);padding:0;}
-.icon-search{display:block;width:14px;height:14px;background:url(../images/topbar.png) no-repeat scroll 0 -60px;}
+.con-search-warp{float:left;display:inline; padding:7px 0 0 ;}
+.con-search{position:relative;width:200px;height:26px;border:1px solid #141414; overflow:hidden;background:#4E4E4E;border-radius:3px;display:inline-block;_display:inline;_zoom:1; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) inset, 0 1px 0 #2A2A2A;transition: all 0.2s linear 0s;}
+.con-search-text{width:100%;*width:76%;*display:inline;overflow:hidden;padding-left:25px;height:26px;border:none;background:none;font-size:12px;position:absolute;top:0;*top:3px;}
+.con-search-text:focus{background:#FFF; }
+.icon-search, .con-search-trigger{display:block;height:14px;position:absolute;left:5px;top:5px;}
+.icon-search{display:block; width:14px;height:14px;background:url(../images/topbar.png) no-repeat scroll 0 -60px; line-height:14px;text-align:center;}
+.con-search-trigger{width:14px;opacity:0;filter:alpha(opacity=0);}
+
 /* con-user-menu 用户操作
  * author: runkingzhang@163.com
  */
 .con-user-menu{height:15px; float:left; display:inline; border-left:1px solid  #333; margin:12px 0 0 0;}
-.con-user-cart{float:left; display:inline;padding:0 10px 0 20px;}
+.con-user-cart{float:left; display:inline;padding:0 10px 0 20px; position:relative;}
 .incon-cart{display:block;height:20px;width:20px;background:url(../images/topbar.png?v=2) no-repeat scroll 0 -80px;}
 .con-user-action{float:right;display:inline;font-size:13px;line-height:15px;color:#CCC;margin:0 0 0 10px;padding:0 10px;}
 .con-user-action a{color:#CCC;}
@@ -270,26 +332,28 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);}
 
 /* con-shoplist 餐馆列表
  * author: runkingzhang@163.com
+ * child:con-shop-box
  */
 .con-shoplist{border-top:1px solid #DDD;zoom:1;background:#FFF;}
 .con-shoplist:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
 .con-shoplist-item{float:left;display:inline;background:#FFF;width:189px;height:90px;border-left:1px solid #DDD;position:relative;}
 .con-shoplist-item:first-child{border-left:1px solid #FFF;}
-/* new-con-shoplist-favar
+
+/* new-con-shoplist-favar 我的收藏
  * author: runkingzhang@163.com
  * father:con-shoplist
  */
 .new-con-shoplist-favar .con-shoplist-item{background:url(../images/bg.gif) no-repeat scroll -112px -94px #FFF;}
 .new-con-shoplist-favar .con-shoplist-item:hover{background:url(../images/bg.gif) no-repeat scroll -303px -94px #FFF;}
 
-
 /* con-shop-box 餐馆列表区块
  * author: runkezhang
  * 这边的关系是可以完善的
  */
-.con-shop-box{padding: 8px 0;overflow: visible;zoom:1;}
+.con-shop-box{padding: 8px;overflow: visible;zoom:1;}
 .con-shop-box:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
-.con-shop-cap{float: left; display: inline;padding: 0  0 0 10px;}
+
+.con-shop-cap{float: left; display: inline;}
 .con-shop-cap a{display: block; position: relative;height: 42px; width:42px; border: 1px solid #DDDDDD;padding: 1px;overflow: visible }
 .con-shop-cap a:hover{border: 1px solid  #999;}
 .con-shop-cap a .icon-phone{ position: absolute; right: -9px; bottom: -9px; z-index: 10;height: 24px;width: 24px;background: url("../images/phone-logo.png") no-repeat scroll -4px -1px rgba(0, 0, 0, 0);}
@@ -297,42 +361,94 @@ background:linear-gradient(top,#FFFFFF,#F5F5F5);}
 .con-shop-time{width:46px;position:relative;display:block;color:#666;font-size:12px;height:16px;line-height:14px;margin-top:8px;padding-top:2px;text-align:center;}
 .con-shop-time-busy{background: #FFE2E2;}
 
-.con-shop-body{float:left;display:inline;overflow:hiidden;width:118px;margin:0 7px 0 8px;}
+.con-shop-body{float:left;display:inline;overflow:hiidden;width:118px;margin:0 0 0 8px;}
 .con-shop-name{white-space:nowrap; overflow:hidden;width:119px; }
 .con-shop-name a{color: #333333;font-size: 15px;overflow: hidden; font-weight: normal;}
+.con-shop-name a:hover{ color:#0088C8;}
+.con-shop-status{ display: inline-block ;margin-top: 9px; background:none repeat scroll 0 0 #F8F8EE;border:1px solid #59B170;color:#59B170;font-size:12px;padding:2px 4px; vertical-align: middle; text-align:center;}
+.con-shop-status-desc{margin-top:7px;font-size:12px;line-height:14px;color:#999;}
 
-.con-shop-status{ display:block;height: 20px; margin-top: 9px; background:none repeat scroll 0 0 #F8F8EE;border:1px solid #59B170;color:#59B170;font-size:12px;padding:2px 4px;}
-
-.con-shop-status span{background:none repeat scroll 0 0 #F8F8EE;border:1px solid #59B170;color:#59B170;font-size:12px;padding:2px 4px;}
-.con-shop-status-desc{margin-top:11px;font-size:12px;line-height:14px;color:#999;}
 .con-shop-favor{position:relative;font-size:12px;height:14px;line-height:14px;margin-top:7px;display:none;}
 .con-shop-favor a{position:absolute;right:0;top:0;line-height:14px;color:#999; }
-.con-shop-favor .icon-favor{display:block;background:url(../images/bg.gif) no-repeat scroll -475px -776px rgba(0,0,0,0);height:22px;width:22px;position:absolute;right:30px;top:0;}
+.con-shop-favor .icon-favor{display:block;background:url(../images/bg.gif) no-repeat scroll -118px -780px rgba(0,0,0,0);height:22px;width:22px;position:absolute;right:30px;top:0;}
+
 .con-shop-flavors{color:#666;font-size:12px;height:12px;line-height:12px;margin-top:4px;}
-.con-shop-ratings{color:#666;font-size:12px;margin-top:4px;height:14px;}
+.con-shop-ratings{color:#666;font-size:12px;margin-top:4px;height:14px;overflow：hidden}
 .con-shop-rating-star{background:url(../images/bg.gif) no-repeat scroll -1px -193px rgba(0,0,0,0);display:inline-block;float:left;height:14px;width:61px;}
+.con-shop-rating-star.r0{background-position:-1px -333px;}
+.con-shop-rating-star.r1{background-position:-1px -318px;}
+.con-shop-rating-star.r2{background-position:-1px -303px;}
+.con-shop-rating-star.r3{background-position:-1px -288px;}
+.con-shop-rating-star.r4{background-position:-1px -273px;}
+.con-shop-rating-star.r5{background-position:-1px -256px;}
+.con-shop-rating-star.r6{background-position:-1px -239px;}
+.con-shop-rating-star.r7{background-position:-1px -223px;}
+.con-shop-rating-star.r8{background-position:-1px -209px;}
+.con-shop-rating-star.r9{background-position:-1px -194px;}
+.con-shop-rating-star.r10{background-position:-1px -179px;}
+
 .con-shop-rating-number{color:#999;float:left;display:inline;font-size:12px;line-height:14px;margin-left:3px;}
 .con-shop-support{margin-top:3px; position:relative; float:left; }
 .con-shop-support b{display:block; width:15px; height:15px; float:left; position:relative; overflow:visible; margin:3px 5px 0 0 ; background:url(../images/service-icons.png8.png?v=3) no-repeat scroll 0 0 rgba(0,0,0,0); font-weight:normal;  }
 .con-shop-support .icon-support{ background-position: 0 0;}
 .con-shop-support .icon-invoice{ background-position: 0 -120px;}
 .con-shop-support .icon-deliver{background-position: 0 -140px;}
-
 .con-shoplist-item:hover .con-shop-status-desc{display: none;}
 .con-shoplist-item:hover .con-shop-favor { display: block;}
+
+/* .new-con-shop-box-tuan
+ * author: runkezhang@163.com
+ * 原型： .con-shop-box
+ */
+.new-con-shop-box-tuan .con-shop-cap a{overflow:hidden;width:67px;z-index:20;padding:2px;}
+.new-con-shop-box-tuan .con-shop-cap a img{height:42px;width:67px;}
+.con-shop-count{font-size:12px;color:#666;text-align:center;height:16px;overflow:hidden;display:block;margin:3px 0 0;}
+.new-con-shop-box-tuan .con-shop-body{width:85px;}
+.con-shop-price{line-height:20px;color:#666;}
+.con-shop-price span{color:#999;text-decoration:line-through;}
+.con-shop-button{cursor:pointer;border-radius:2px;width:70px;background-color:#FFF;border:1px solid #D9D9D9;color:#FF8400;text-align:center;margin:5px 0 0;}
+.con-shop-button a{color:#FF8400;line-height:22px;font-family:"Microsoft YaHei",黑体;font-size:12px;}
+.con-shop-button a:hover{color:#F60;text-decoration:none;}
 
 /* con-shop-information 餐馆信息
  * author: runkezhang
  */
 .con-information{text-align: left; line-height: 20px; color: #333333;}
 .con-information p{margin: 3px 0 0 0;}
-.con-information .con-shop-name{font-size: 15px; line-height: 20px; font-weight: normal;}
-.con-information .con-shop-name a:hover{ color:#0088C8 }
 .con-information mark{ font-weight: bold; font-style:  normal;  color: #333333; padding: 0 4px 0 0;}
 .con-shop-ann{ color: #ff9933;}
-.con-shop-ann mark{color: #ff9933; margin:3px 0 0 0;}
+.con-shop-ann mark{color: #ff9933; margin:3px 0 3px 0;}
 .con-information address{ font-style: normal; margin:3px 0 0 0;}
+/* con-filter 热门餐馆选择器
+ * author: runkezhang@163.com
+ */
+.con-filter{line-height:40px;zoom:1;}
+.con-filter:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.con-filter-wrap{float:left;display:inline;background:url(../images/divider.gif) no-repeat scroll right center ;margin:0 10px 0 0;}
+.con-filter input{margin:1px 2px 0 0;}
+.con-filter label{vertical-align:middle;position:relative;padding:0 10px 0 0;}
+.icon-new{background:url(../images/pRst-sprites.png?v=3) no-repeat scroll 0 -330px rgba(0,0,0,0);height:17px;left:20px;position:absolute;top:-17px;width:31px;}
+.new-con-filter-wrap-nomargin{margin:0;}
 
+/* .con-geoplace 热门餐馆选择器
+ * author: runkezhang@163.com
+ */
+.con-geoplace-warp{margin:30px 0; }
+.con-geoplace{zoom:1;}
+.con-geoplace:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.con-geoplace-item{float: left;display: inline; margin:0 0 0 50px;}
+.con-geoplace-item:first-child{margin:0 0 0 0;}
+.con-geoplace-item:hover{margin-top:-1px;}
+.con-geoplace-item img{width: 150px; height: 93px;}
+
+/* 底部信息
+ * author: runkezhang@163.com
+ */
+.con-cert-wap,.con-copyright{text-align:center;font-family:"Helvetica Neue",Arial,"Microsoft Yahei",sans-serif;margin:0 0 15px;}
+.con-cert{display:inline-block;margin-left:-2px;text-align:left;padding:0 20px;}
+.con-cert img{ float:left;  display:inline; margin:0  10px 0 0;}
+.con-cert-info{font-size:12px;line-height:14px;color:#666; display: inline; float:left }
+.con-cert:first-child{border-right:1px solid #999;}
 
 
 
