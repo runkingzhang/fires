@@ -8,9 +8,10 @@
 <meta name="description" content="ele.me为你提供广州市G餐厅附近的海量美食信息，
  你可以直接在上面下单订餐，叫外卖还能赚积分，更有惊喜好礼等你拿哦！">
 <meta name="keyword" content="ele.me ,外卖,广州">
-<link  href="css/reborn.css"  type="text/css"  rel="stylesheet">
+<link  href="css/index.css"  type="text/css"  rel="stylesheet">
 <link rel="apple-touch-icon-precomposed" href="http://static10.elemecdn.com/apple-touch-icon.png?v=2">
 <link rel="shortcut icon" href="http://ele.me/favicon.ico?v=2" type="image/x-icon">
+<script src="js/slide.js" defer="defer" ></script>
 </head>
 
 <body class="lay-body">
@@ -26,14 +27,14 @@
                 </a>
                 
                 <div class="con-search-warp">
-                <form class="con-search-form"  id="con-search-form" action="/root">
-                    <input id="con-search-text" class="con-search-text"  type="text" name="kw" autocomplete="off" placeholder="搜索餐厅，美食…">
-                    <b class="icon-search"></b>																		
-                    <input type="submit" class="con-search-submit" title="搜索" value="">
-                </form>
+                <form class="con-search">
+                    <input class="con-search-text" placeholder="搜索二级类目">
+                    <i class="icon-search"></i>
+                    <input type="submit" class="con-search-trigger" title="搜索" value="">
+                    </form>
                 </div>
                 
-                   <nav  class="mod-nav">
+                <nav  class="mod-nav">
                     <ul class="mod-nav-main">
                         <li class="mod-nav-item"><a href="#">我的饿单</a></li>
                         <li class="mod-nav-item"><a href="#">礼品中心</a></li>
@@ -42,11 +43,20 @@
                     </ul>
                    </nav> 
                    
-                   <div class="con-user-menu">
-                   		<!--这边其实是有下拉菜单的。-->
+                 <div class="con-user-menu">
 						<a class="con-user-cart">
-                        	<b class="incon-cart"></b>
+                        	<b class="incon-cart">
+                            		<!--你好，我是一个冒泡，我出来冒一下泡-->
+                            		<div class="mod-tooltip mod-tooltip-bottom  new-mod-tooltip-cart">
+                                              <div class="mod-tooltip-arrow"></div>
+                                              <div class="mod-tooltip-inner">
+                                              篮子空空，肚子空空，快去订餐吧~
+                                              </div>
+                                              
+                                     </div>
+                            </b>
                         </a>
+                        
                         <p  class="con-user-action">
                         <a href="#">登录</a>
                         <b>&frasl;</b>
@@ -60,12 +70,20 @@
          <div class="lay-content">
          		<div class="con-breadcrumb">
          				<h3 class="con-breadcrumb-current">G餐厅</h3>   
-               			 <a class="con-breadcrumb-switch" href="#">[切换地址]</a>
+               			<a class="con-breadcrumb-switch" href="#">[切换地址]</a>
                 </div>
 				 
-                 <div class="mod-banner" id="mod-banner">
-                		<img src="images/banner1.gif">
-            	 </div>
+         <div id="mod-slide" class="mod-slide">
+                <ul class=" mod-slide-warp" >
+                <li  ><a href="#" target="_blank"><img src="./images/slide1.gif"></a></li>
+                <li  ><a href="#" target="_blank"><img src="./images/slide2.gif" ></a></li>
+                </ul>
+              <p class="mod-slide-nav">
+              <span class="on">1</span>
+              <span >2</span>
+              </p>
+      </div>
+      			
                  
                  <!-- 我的设置 -->
           	    <section class="mod-box new-mod-box-favar">
@@ -134,7 +152,7 @@
                                     
                                     <div class="con-shop-body">
                                         <h4 class="con-shop-name">
-                                          <a href="#">佰味来（新旺..</a>
+                                          	<a href="#">佰味来（新旺..</a>
                                         </h4>
                                         <a class="con-shop-status" href="#">接受预订</a>
                                         <p class="con-shop-status-desc" >
@@ -154,7 +172,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -163,17 +181,17 @@
                                                           <a href="#"> 佰味来（新旺店）</a>
                                                           </h4>
                                             <p class="con-shop-ann">
-                                                 <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                                 <mark>公告:</mark>叫外卖，上饿了么！
                                             </p>
                                             <p class="con-shop-deliver">
-                                                <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                                <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                             </p>
                                             <address>
-                                                <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                                <mark>地址:</mark>黄埔大道西105号—1
                                             </address>
                                             
-                                            <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                            <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                            <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                            <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                                          </div>
                                                      </div>
                                                   </div>
@@ -219,9 +237,9 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
-                                                        <i>◆</i>
+                                                           <i>◆</i>
                                                            </span>
                                                         <div class="mod-poptip-content con-information">
                                                             <h4 class="con-shop-name">
@@ -230,6 +248,8 @@
                                                         <ul>
                                                             <li>
                                                                 <p class="con-shop-support-des">
+                                                                <b class="icon-support  icon-deliver ">
+                                               					 </b>
                                                                 该餐厅当前只支持电话订餐，选择美食后可以查看餐厅电话
                                                                   </p>
                                                             </li>
@@ -299,7 +319,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -350,7 +370,7 @@
                  <!-- 热门餐馆-->
                  <section class="mod-box new-mod-box-promoted">
                     <div class="mod-box-head ">
-                        <div class="con-filter fn-clearfix">
+                        <div class="con-filter">
                                 <form>
                                  <div class="con-filter-wrap">
                                 <label for="tuijian">
@@ -394,14 +414,25 @@
                                        <li><a href="#">韩式</a></li>
                                    </ul>
                                 </div>
-    
+
+                                <div class="mod-deliver ">
+                                <span  class="mod-deliver-span" >起送价</span>
+                                  <div class="mod-slider-wrapper">
+                                    <div id="geo_deliver_slider" class="mod-deliver-slider" title="20元" level="2" max="4" min="1" aria-disabled="false">
+                                    <div class="mod-slider-range " ></div>
+                                    <a class="mod-slider-handle " ></a>
+                                    </div>
+                                  </div>
+                                  <span class="mod-deliver-span" id="deliver-amount-level">20元以下</span>
+                			</div>
+                            
                         </div>
                         
                       </div>
                     
                     <div class="mod-box-container">
                         <div class="mod-box-content">
-                        <ul class="con-shoplist fn-clearfix">
+                        <ul class="con-shoplist ">
                                 <dl class="con-shoplist-item">
                                 <!-- con-shop-box餐馆展示 -->
                                 <dt class="con-shop-box ">
@@ -444,26 +475,26 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
-                                                        <i>◆</i>
+                                                            <i>◆</i>
                                                            </span>
                                                         <div class="mod-poptip-content con-information">
                                                             <h4 class="con-shop-name">
                                                           <a href="#"> 佰味来（新旺店）</a>
                                                           </h4>
                                             <p class="con-shop-ann">
-                                                 <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                                 <mark>公告:</mark>叫外卖，上饿了么！
                                             </p>
                                             <p class="con-shop-deliver">
-                                                <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                                <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                             </p>
                                             <address>
-                                                <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                                <mark>地址:</mark>黄埔大道西105号—1
                                             </address>
                                             
-                                            <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                            <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                            <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                            <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                                          </div>
                                                      </div>
                                                   </div>
@@ -515,7 +546,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -593,7 +624,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -670,7 +701,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -743,7 +774,7 @@
                                 <dd class="mod-poptip new-poptip-information-left" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-right">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-right">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -821,7 +852,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -830,17 +861,17 @@
                                                           <a href="#"> 佰味来（新旺店）</a>
                                                           </h4>
                                             <p class="con-shop-ann">
-                                                 <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                                 <mark>公告:</mark>叫外卖，上饿了么！
                                             </p>
                                             <p class="con-shop-deliver">
-                                                <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                                <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                             </p>
                                             <address>
-                                                <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                                <mark>地址:</mark>黄埔大道西105号—1
                                             </address>
                                             
-                                            <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                            <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                            <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                            <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                                          </div>
                                                      </div>
                                                   </div>
@@ -892,7 +923,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -970,7 +1001,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1047,7 +1078,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1119,7 +1150,7 @@
                                 <dd class="mod-poptip new-poptip-information-left" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-right">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-right">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1197,7 +1228,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1206,17 +1237,17 @@
                                                           <a href="#"> 佰味来（新旺店）</a>
                                                           </h4>
                                             <p class="con-shop-ann">
-                                                 <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                                 <mark>公告:</mark>叫外卖，上饿了么！
                                             </p>
                                             <p class="con-shop-deliver">
-                                                <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                                <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                             </p>
                                             <address>
-                                                <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                                <mark>地址:</mark>黄埔大道西105号—1
                                             </address>
                                             
-                                            <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                            <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                            <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                            <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                                          </div>
                                                      </div>
                                                   </div>
@@ -1268,7 +1299,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1346,7 +1377,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1423,7 +1454,7 @@
                                 <dd class="mod-poptip new-poptip-information" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-left">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1475,7 +1506,6 @@
                                               <span class="con-shop-rating-number">50订单</span>
                                           </p>
                                           <div class="con-shop-support ">
-                                                
                                                 <b class="icon-support  icon-invoice " >
                                                 <div class="mod-tooltip mod-tooltip-top in new-mod-tooltip-support" >
                                               <div class="mod-tooltip-arrow"></div>
@@ -1495,7 +1525,7 @@
                                 <dd class="mod-poptip new-poptip-information-left" >
                                                     <div class="mod-poptip-shadow ">
                                                       <div class="mod-poptip-container">
-                                                          <span class="poptip-arrow  poptip-arrow-right">
+                                                          <span class="mod-poptip-arrow  mod-poptip-arrow-right">
                                                             <em>◆</em>
                                                         <i>◆</i>
                                                            </span>
@@ -1538,29 +1568,29 @@
                 <section class="con-geoplace-warp">
                     <ul class="con-geoplace">
                         <li class="con-geoplace-item">
-                            <a href="#">
+                            <a href="#" title="热卖美食">
                                 <img src="images/geoplace-1.gif">
                             </a>
                         </li>
                         <li class="con-geoplace-item">
-                            <a href="#">
+                            <a href="#" title="订餐流程">
                                 <img src="images/geoplace-2.gif">
                             </a>
                         </li>
     
                         <li class="con-geoplace-item">
-                            <a href="#">
+                            <a href="#" title="手机客户端">
                                 <img src="images/geoplace-3.gif">
                             </a>
                         </li>
     
                         <li class="con-geoplace-item">
-                            <a href="#">
+                            <a href="#" title="外卖说明"> 
                                 <img src="images/geoplace-4.gif">
                             </a>
                         </li>
                         <li class="con-geoplace-item">
-                            <a href="#">
+                            <a href="#" title="常见问题">
                                 <img src="images/geoplace-5.gif">
                             </a>
                         </li>
@@ -1756,7 +1786,7 @@
                             <dd class="mod-poptip new-poptip-information-top"  >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -1765,17 +1795,17 @@
                                                       <a href="#"> 佰味来（新旺店）</a>
                                                       </h4>
                                         <p class="con-shop-ann">
-                                             <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                             <mark>公告:</mark>叫外卖，上饿了么！
                                         </p>
                                         <p class="con-shop-deliver">
-                                            <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                            <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                         </p>
                                         <address>
-                                            <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                            <mark>地址:</mark>黄埔大道西105号—1
                                         </address>
                                         
-                                        <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                        <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                        <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                        <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                               		 </div>
                                                  </div>
                                               </div>
@@ -1827,7 +1857,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -1905,7 +1935,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -1982,7 +2012,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2054,7 +2084,7 @@
                             <dd class="mod-poptip new-poptip-information-left-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-right">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-right">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2131,7 +2161,7 @@
                             <dd class="mod-poptip new-poptip-information-top"  >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2140,17 +2170,17 @@
                                                       <a href="#"> 佰味来（新旺店）</a>
                                                       </h4>
                                         <p class="con-shop-ann">
-                                             <mark>公告:</mark>&nbsp;叫外卖，上饿了么！
+                                             <mark>公告:</mark>叫外卖，上饿了么！
                                         </p>
                                         <p class="con-shop-deliver">
-                                            <mark>起送价:</mark>&nbsp;到G餐厅 25元。 （额外说明：)
+                                            <mark>起送价:</mark>到G餐厅 25元。 （额外说明：)
                                         </p>
                                         <address>
-                                            <mark>地址:</mark>&nbsp;黄埔大道西105号—1
+                                            <mark>地址:</mark>黄埔大道西105号—1
                                         </address>
                                         
-                                        <time><mark>营业时间:</mark>&nbsp;10:00 - 13:00 / 16:30 - 19:00</time>
-                                        <p><strong>简介:</strong>&nbsp;广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
+                                        <time><mark>营业时间:</mark>10:00 - 13:00 / 16:30 - 19:00</time>
+                                        <p><strong>简介:</strong>广州著名商标【佰味来】给您最健康的午餐！叫外卖，上饿了么！餐厅优先配送！</p>
                                               		 </div>
                                                  </div>
                                               </div>
@@ -2202,7 +2232,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2280,7 +2310,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2357,7 +2387,7 @@
                             <dd class="mod-poptip new-poptip-information-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-left">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-left">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2392,7 +2422,7 @@
                         </dl>
                         <dl class="con-shoplist-item">
                         	<!-- con-shop-box餐馆展示 -->
-                            <dt class="con-shop-box ">
+                            <dt class="con-shop-box  new-con-shop-box-closed">
                                 <div class="con-shop-cap">
                                     <a href="http://r.ele.me/gd-bwlxwd" target="_blank">
                                         <img  class ="con-shop-logo" src="images/shop-logo1.png">
@@ -2403,20 +2433,11 @@
                                     <h4 class="con-shop-name">
                                       <a href="#">尊宝比萨（名..</a>
                                     </h4>
-                                     <p class="con-shop-flavors "> 中式、西式</p>
-                                     <p class="con-shop-ratings fn-clearfix">
-                                          <b title="餐厅评价：4.6星" class="con-shop-rating-star"></b>
-                                          <span class="con-shop-rating-number">50订单</span>
-                                      </p>
-                                      <div class="con-shop-support ">
-                                            
-                                            <b class="icon-support  icon-invoice " >
-                                            <div class="mod-tooltip mod-tooltip-top in new-mod-tooltip-support" >
-                                          <div class="mod-tooltip-arrow"></div>
-                                          <div class="mod-tooltip-inner">该餐厅支持开发票，请在下单时填写好发票抬头,请在下单时填写好发票抬头</div>
-                                          </div> 
-                                            </b>
-                                        </div>
+                                     <a class="con-shop-status" href="#">休息中</a>
+                                        <p class="con-shop-status-desc" >
+                                              <span>已打烊</span>
+                                        </p>
+                                        
                                     <p class="con-shop-favor">
                                         <b class="icon-favor">
                                         </b>
@@ -2429,7 +2450,7 @@
                             <dd class="mod-poptip new-poptip-information-left-top" >
                                                 <div class="mod-poptip-shadow ">
                                                   <div class="mod-poptip-container">
-                                                      <span class="poptip-arrow  poptip-arrow-right">
+                                                      <span class="mod-poptip-arrow  mod-poptip-arrow-right">
                                                			<em>◆</em>
                                                     <i>◆</i>
                                                        </span>
@@ -2484,16 +2505,16 @@
               </nav> 
               
             <p class="con-copyright">Copyright ©2008-2014 ele.me, All Rights Reserved. </p>
-            <p>
-    <a class="con-cert " target="_blank" href="http://www.miibeian.gov.cn" rel="nofollow">
-      <i class="icon-icp"></i>
-      <span class="con-cert-info">沪ICP备<br>09007032</span>
-    </a>
-    <a class="con-cert " target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823" rel="nofollow">
-      <i class="icon-aic"></i>
-      <span class="con-cert-info">上海工商<br>行政管理</span>
-    </a>
-  </p>
+            <p class= "con-cert-wap">
+              <a class="con-cert " target="_blank" href="http://www.miibeian.gov.cn" rel="nofollow">
+              	<img src="images/icp.png">
+                <span class="con-cert-info">沪ICP备<br>09007032</span>
+              </a>
+              <a class="con-cert " target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20120305173227823" rel="nofollow">
+                <img src="images/aic.png">
+                <span class="con-cert-info">上海工商<br>行政管理</span>
+              </a>
+  		</p>
         </div>
     </footer>
 </body>
